@@ -1,0 +1,58 @@
+{
+  "name": "slot-machine",
+  "version": "1.0.0",
+  "description": "Slot machine game",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "jest --coverage --verbose --runInBand",
+    "test:watch": "jest --coverage --verbose --runInBand --watchAll"
+  },
+  "keywords": [],
+  "author": "bharath",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-jest": "^22.2.2",
+    "react-hot-loader": "^4.3.11",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "immutable": "^3.8.2",
+    "jest": "^22.2.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "node-sass": "^4.6.1",
+    "raf": "^3.4.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0  ",
+    "sass-loader": "^6.0.6"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./__test__/setupTests.js",
+    "setupFiles": [
+      "raf/polyfill"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "babel-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/vendor/**",
+      "!webpack.config.js"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
