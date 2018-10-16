@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for Roller (wheel) component Should load properly for roller(wheel) data when there's no backgroundPosition: test for backgroundPosition is missing 1`] = `
+<div
+  style={
+    Object {
+      "backgroundPosition": "0 0",
+    }
+  }
+/>
+`;
+
+exports[`tests for Roller (wheel) component Should load properly for roller(wheel) element data: test for backgroundPosition is present in element data 1`] = `
+<div
+  style={
+    Object {
+      "backgroundPosition": "-0 -200px",
+    }
+  }
+/>
+`;

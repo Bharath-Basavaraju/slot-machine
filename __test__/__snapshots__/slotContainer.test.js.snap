@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for slot container component Should load properly for for initial load: test for initial load 1`] = `
+<div>
+  <div />
+  <div>
+    <button
+      className="undefined "
+      id="startBtn"
+    >
+      Start
+    </button>
+    <button
+      className="undefined undefined"
+      disabled={true}
+      id="stopBtn"
+    >
+      Stop
+    </button>
+  </div>
+</div>
+`;
+
+exports[`tests for slot container component Should load properly for rollers(wheels) data on page load: test for rollers(wheels) data on page load 1`] = `
+<div>
+  <div>
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -0",
+          "id": "strawberry",
+        }
+      }
+      key="0"
+    />
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -0",
+          "id": "strawberry",
+        }
+      }
+      key="1"
+    />
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -200px",
+          "id": "orange",
+        }
+      }
+      key="2"
+    />
+  </div>
+  <div>
+    <button
+      className="undefined "
+      disabled={false}
+      id="startBtn"
+    >
+      Start
+    </button>
+    <button
+      className="undefined undefined"
+      disabled={true}
+      id="stopBtn"
+    >
+      Stop
+    </button>
+  </div>
+</div>
+`;
+
+exports[`tests for slot container component Should load properly for rollers(wheels) spinning: test for rollers(wheels) spinning 1`] = `
+<div>
+  <div>
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -0",
+          "id": "strawberry",
+        }
+      }
+      key="0"
+    />
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -300px",
+          "id": "monkey",
+        }
+      }
+      key="1"
+    />
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -200px",
+          "id": "orange",
+        }
+      }
+      key="2"
+    />
+  </div>
+  <div>
+    <button
+      className="undefined undefined"
+      disabled={true}
+      id="startBtn"
+    >
+      Start
+    </button>
+    <button
+      className="undefined "
+      disabled={false}
+      id="stopBtn"
+    >
+      Stop
+    </button>
+  </div>
+</div>
+`;
+
+exports[`tests for slot container component Should load properly for showing result: test for showing result 1`] = `
+<div>
+  <div>
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -100px",
+          "id": "banana",
+        }
+      }
+      key="0"
+    />
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -100px",
+          "id": "banana",
+        }
+      }
+      key="1"
+    />
+    <RollerComponent
+      elementData={
+        Object {
+          "backgroundPosition": "-0 -300px",
+          "id": "monkey",
+        }
+      }
+      key="2"
+    />
+  </div>
+  <div>
+    <button
+      className="undefined "
+      disabled={false}
+      id="startBtn"
+    >
+      Start
+    </button>
+    <button
+      className="undefined undefined"
+      disabled={true}
+      id="stopBtn"
+    >
+      Stop
+    </button>
+  </div>
+  <div>
+    you won $20
+  </div>
+</div>
+`;

@@ -1,0 +1,13 @@
+body {
+    height: 100%;
+    background: #292E2F;
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#app{
+    margin: 0 auto;
+}
+

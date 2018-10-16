@@ -1,0 +1,9 @@
+export const numberOfRoller = 3;
+export const numberOfSlotElement = 4;
+export const spinSpeed = 50; // in mS
+export const defaultStartSpin = 5000; //in ms
+export const defaultStopSpin = 10000; // in ms
+export const firstPrize = "You Won $100";
+export const secondPrize = "You Won $20";
+export const thirdPrize = "You Won $10";
+export const lostMsg = "Sorry, you lost!";

@@ -1,5 +1,5 @@
 module.exports = {
-    //devtool: "inline-sourcemap",
+    devtool: "inline-sourcemap",
     entry: './src/index.js',
     resolve: {
         extensions: ['*', '.js', '.jsx']
@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist',
         publicPath: '/',
-        filename: 'slot_machine.js'
+        filename: 'slotMachine.min.js'
     },
     module: {
         rules: [
@@ -19,6 +19,13 @@ module.exports = {
             {
                 test: /.scss$/,
                 loader: 'style-loader!css-loader?modules&sourceMap&localIdentName=[local]___[hash:base64:5]!sass-loader?outputStyle=expanded&sourceMap'
+            },
+            {
+                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000
+                }
             }
         ]
     },

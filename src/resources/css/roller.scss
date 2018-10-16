@@ -1,0 +1,12 @@
+.slotRow {
+  background: url(../images/css_sprites.png) repeat-y;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 1px solid #000000;
+  margin: 0 2px;
+  will-change: backgroundPosition;
+  transition: 0.05s background-position ease-in-out;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}

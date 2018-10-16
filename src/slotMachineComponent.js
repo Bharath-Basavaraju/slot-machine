@@ -1,22 +1,44 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import createSagaMiddleware from 'redux-saga';
+import 'regenerator-runtime/runtime'
+import { createStore, applyMiddleware } from 'redux';
+import CreateSagaMiddleware from 'redux-saga';
+import { SlotMachineReducer } from  './reducers/slotMachineReducer';
 import slotMachineSagas from './sagas/slotMachineSagas';
+import SlotContainerComponent from './view/slotContainer';
+import { rollerData } from './resources/data/data';
+import * as actions from './actions/slotActions';
 
-const sagaMiddleware = createSagaMiddleware();
-let store = createStore(combineReducers({
+const sagaMiddleware = CreateSagaMiddleware();
+let store = createStore(SlotMachineReducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(slotMachineSagas);
+const title = "Slot Machine Game",
+    errorMsg = "Sorry, we are trying to get back. Try after sometime !";
 
-            }), applyMiddleware(sagaMiddleware));
-//sagaMiddleware.run(slotMachineSagas);
-const title = "Slot Machine Game";
+export default class SlotMachineComponent extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+        store.dispatch(actions.setRollerData(rollerData));
+        store.dispatch(actions.setSlotElements());
+        store.dispatch(actions.waitToStartSpin());
+    }
 
-export default class SlotMachineComponet extends React.Component{
+    componentDidCatch(error, info) {
+        // Display fallback UI
+        this.setState({ hasError: true });
+    }
+
     render(){
         return(
-            <Provider store={store}>
-                <div>{title}</div>
-            </Provider>
+            this.state.hasError ?
+                <h3>{errorMsg}</h3>
+            :   <div>
+                    <h1>{title}</h1>
+                    <Provider store={store}>
+                        <SlotContainerComponent {...this.props} />
+                    </Provider>
+                </div>
         )
     }
 }
