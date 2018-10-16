@@ -8,3 +8,8 @@ clone the repository
 $ npm install
 $ npm start & open http://localhost:8080
 ```
+# To run test
+``bash
+$ npm test
+```
+
